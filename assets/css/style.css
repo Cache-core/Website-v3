@@ -1612,3 +1612,87 @@ section {
 #footer .credits {
   font-size: 13px;
 }
+
+table.customTable {
+  border: 1px solid #121212;
+  background-color: #EEEEEE;
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+}
+
+table.customTable td, table.customTable th {
+  border: 1px solid #AAAAAA;
+  padding: 3px 2px;
+}
+
+table.customTable tbody td {
+  font-size: 13px;
+}
+
+table.customTable tr:nth-child(even) {
+  background: #CCCCCC;
+}
+
+table.customTable thead {
+  background: #212121;
+  background: -moz-linear-gradient(top, #585858 0%, #373737 66%, #212121 100%);
+  background: -webkit-linear-gradient(top, #585858 0%, #373737 66%, #212121 100%);
+  background: linear-gradient(to bottom, #585858 0%, #373737 66%, #212121 100%);
+  border-bottom: 2px solid #CCCCCC;
+}
+
+table.customTable thead th {
+  font-size: 15px;
+  font-weight: bold;
+  color: #FFFFFF;
+  text-align: center;
+  border-left: 2px solid #CCCCCC;
+}
+
+table.customTable thead th:first-child {
+  border-left: none;
+}
+
+table.customTable tfoot td {
+  font-size: 14px;
+}
+
+table.customTable tfoot .links {
+  text-align: right;
+}
+
+table.customTable tfoot .links a{
+  display: inline-block;
+  background: #1C6EA4;
+  color: #FFFFFF;
+  padding: 2px 8px;
+  border-radius: 5px;
+}
+
+pre {
+  background-color: #212121;
+  overflow: auto;
+  font-family: 'Monaco', monospace;
+  padding: 0 1em;
+}
+
+code {
+  font-family: Monaco, monospace;
+  line-height: 100%;
+  background-color: #212121;
+  color: lightcoral;
+  padding: 0.2em;
+  letter-spacing: -0.05em;
+  word-break: normal;
+  border-radius: 5px;
+}
+
+pre code {
+  border: none;
+  background: none;
+  line-height: 1em;
+  letter-spacing: normal;
+  word-break: break-all;
+  color: lightcoral;
+}
