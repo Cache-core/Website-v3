@@ -318,36 +318,36 @@ cxche.info()
               <!-- We do this with <pre> and <code> so the text isn't aligned with all the new line spaces. -->
 <pre style="width: 75%;">
   <code>
-{ <br>
-  alt_blocks_count: 0 <br>
-  block_major_version: 2 <br>
-  block_minor_version: 0 <br>
-  connections: [ <br>
-  &#60;IP1&#62;, <br>
-  &#60;IP2&#62;, <br>
-  &#60;IP3&#62;, <br>
-  ... <br>
-  ] <br>
-  difficulty: 6539038 <br>
-  fee_address: <br>
-  full_deposit_amount: 653397900 <br>
-  grey_peerlist_size: 82 <br>
-  height: 39596 <br>
-  incoming_connections_count: 31 <br>
-  last_block_difficulty: 6944549 <br>
-  last_block_reward: 300000 <br>
-  last_block_timestamp: 1610306951 <br>
-  last_known_block_index: 39595 <br>
-  node_info: cache-core-3 <br>
-  outgoing_connections_count: 4 <br>
-  start_time: 1608710994 <br>
-  status: OK <br>
-  top_block_hash: 69a6e7611946718ffc17620394a7d83f618f8b88a04b5dc2019c44bd0d62e37e <br>
-  tx_count: 44536 <br>
-  tx_pool_size: 0 <br>
-  version: 1.0.4 <br>
-  white_peerlist_size: 43 <br>
-} <br>
+{
+  alt_blocks_count: 0
+  block_major_version: 2
+  block_minor_version: 0
+  connections: [
+  &#60;IP1&#62;,
+  &#60;IP2&#62;,
+  &#60;IP3&#62;,
+  ...
+  ]
+  difficulty: 6539038
+  fee_address:
+  full_deposit_amount: 653397900
+  grey_peerlist_size: 82
+  height: 39596
+  incoming_connections_count: 31
+  last_block_difficulty: 6944549
+  last_block_reward: 300000
+  last_block_timestamp: 1610306951
+  last_known_block_index: 39595
+  node_info: cache-core-3
+  outgoing_connections_count: 4
+  start_time: 1608710994
+  status: OK
+  top_block_hash: 69a6e7611946718ffc17620394a7d83f618f8b88a04b5dc2019c44bd0d62e37e
+  tx_count: 44536
+  tx_pool_size: 0
+  version: 1.0.4
+  white_peerlist_size: 43
+}
   </code>
 </pre>
 
@@ -396,6 +396,38 @@ cxche.info()
                   </tr>
                 </tbody>
               </table>
+              <br>
+              <h4>Useful Commands</h4>
+
+              <table class="customTable" style="width: 30%;">
+                <thead>
+                  <tr>
+                    <th>Format</th>
+                    <th>Command</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <td>Shell</td>
+                    <td><code>curl http://localhost:39000/getheight</code></td>
+                  </tr>
+                </tbody>
+                <tbody>
+                  <tr>
+                    <td>NodeJS</td>
+                    <td>
+<pre>
+  <code>
+const CXCHE = require('cache-api-js')
+const cxche = new CXCHE('http://localhost', '39000')
+    
+cxche.index()
+  </code>
+</pre></td>
+                  </tr> 
+                </tbody>
+              </table>
 
 
               <br>
@@ -404,10 +436,10 @@ cxche.info()
               <!-- We do this with <pre> and <code> so the text isn't aligned with all the new line spaces. -->
 <pre style="width: 75%;">
   <code>
-{ <br>
+{
   height: 40819
   status: OK
-} <br>
+}
   </code>
 </pre>
 
