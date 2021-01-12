@@ -105,19 +105,19 @@
 
         <ul class="faq-list">
 
-          <li data-aos="fade-up" data-aos-delay="100">
+          <li>
             <a data-bs-toggle="collapse" class="" data-bs-target="#faq1">/getInfo <i class="icofont-simple-up"></i></a>
 
             <div id="faq1" class="collapse show" data-bs-parent=".faq-list">
               <br>
               <h4>Description</h4>
               <p><code>getInfo()</code> returns information related to the network and daemon connection.</p>
-              
+
               <h4>Output</h4>
               <p>
-                <code>Int</code> = Contains strictly numbers.
+                <code>Array</code> = Contains a data structure.
                 <br>
-                <code>IP</code> = Contains numbers following colons.
+                <code>Int</code> = Contains strictly numbers.
                 <br>
                 <code>Hash</code> = Contains a cryptographic hash using letters and numbers.
                 <br>
@@ -157,120 +157,120 @@
                   <tr>
                     <td><code>connections</code></td>
                     <td>List's the current connected IP addresses that are sending and recieving data from this node.</td>
-                    <td><code>IP</code></td>
+                    <td><code>array</code></td>
                   </tr>
 
                   <tr>
                     <td><code>difficulty</code></td>
-                    <td>cell2_4</td>
+                    <td>Current measured difficulty of the top block to solve the block.</td>
                     <td><code>int</code></td>
                   </tr>
 
                   <tr>
                     <td><code>fee_address</code></td>
-                    <td>cell2_4</td>
+                    <td>If one is set, you pay a fee for using the remote node to this set address automatically.</td>
                     <td><code>string</code></td>
                   </tr>
 
                   <tr>
                     <td><code>full_deposit_amount</code></td>
-                    <td>cell2_4</td>
+                    <td>In atomic units, this is the amount of the current banked coins on the Cache blockchain.</td>
                     <td><code>int</code></td>
                   </tr>
 
                   <tr>
                     <td><code>grey_peerlist_size</code></td>
-                    <td>cell2_4</td>
+                    <td>List of peers that were alive but not any more (offline).</td>
                     <td><code>int</code></td>
                   </tr>
 
                   <tr>
                     <td><code>height</code></td>
-                    <td>cell2_4</td>
+                    <td>Index of the last locally stored block.</td>
                     <td><code>int</code></td>
                   </tr>
 
                   <tr>
                     <td><code>incoming_connections_count</code></td>
-                    <td>cell2_4</td>
+                    <td>Number of peers connected to and pulling data from this daemon node.</td>
                     <td><code>int</code></td>
                   </tr>
 
                   <tr>
                     <td><code>last_block_difficulty</code></td>
-                    <td>cell2_4</td>
+                    <td>The total difficulty of the last block before the current.</td>
                     <td><code>int</code></td>
                   </tr>
 
                   <tr>
                     <td><code>last_block_reward</code></td>
-                    <td>cell2_4</td>
+                    <td>The total reward, measured in atomic units, of the last block.</td>
                     <td><code>int</code></td>
                   </tr>
 
                   <tr>
                     <td><code>last_block_timestamp</code></td>
-                    <td>cell2_4</td>
+                    <td>Recorded as a UNIX timestamp, this is the exact time of the last block mined.</td>
                     <td><code>int</code></td>
                   </tr>
 
                   <tr>
                     <td><code>last_known_block_index</code></td>
-                    <td>cell2_4</td>
+                    <td>The last known mutual block height between nodes on the blockchain.</td>
                     <td><code>int</code></td>
                   </tr>
 
                   <tr>
                     <td><code>node_info</code></td>
-                    <td>cell2_4</td>
+                    <td>Information about the current connected node.<br>I.E: Contact details if faulty or offline.</td>
                     <td><code>string</code></td>
                   </tr>
 
                   <tr>
                     <td><code>outgoing_connections_count</code></td>
-                    <td>cell2_4</td>
+                    <td>Number of outgoing connections from the node.</td>
                     <td><code>int</code></td>
                   </tr>
 
                   <tr>
                     <td><code>start_time</code></td>
-                    <td>cell2_4</td>
+                    <td>Recorded as a UNIX timestamp, this is the exact time the current node came online.</td>
                     <td><code>int</code></td>
                   </tr>
 
                   <tr>
                     <td><code>status</code></td>
-                    <td>cell2_4</td>
-                    <td><code>int</code></td>
+                    <td>Status of request.</td>
+                    <td><code>string</code></td>
                   </tr>
 
                   <tr>
                     <td><code>top_block_hash</code></td>
-                    <td>cell2_4</td>
-                    <td><code>int</code></td>
+                    <td>The last block hash of the blockchain.</td>
+                    <td><code>hash</code></td>
                   </tr>
 
                   <tr>
                     <td><code>tx_count</code></td>
-                    <td>cell2_4</td>
+                    <td>Total number of non-coinbase transaction in the chain.</td>
                     <td><code>int</code></td>
                   </tr>
 
                   <tr>
                     <td><code>tx_pool_size</code></td>
-                    <td>cell2_4</td>
+                    <td>Number of transactions that have been broadcast but not included in a block.</td>
                     <td><code>int</code></td>
                   </tr>
 
                   <tr>
                     <td><code>version</code></td>
-                    <td>cell2_4</td>
+                    <td>Version of the node software.</td>
                     <td><code>int</code></td>
                   </tr>
 
                   <tr>
                     <td><code>white_peerlist_size</code></td>
-                    <td>cell2_4</td>
+                    <td>List of online peers.</td>
                     <td><code>int</code></td>
                   </tr>
 
@@ -355,27 +355,79 @@ cxche.info()
             </div>
           </li>
 
-          <li data-aos="fade-up" data-aos-delay="200">
+          <li>
             <a data-bs-toggle="collapse" data-bs-target="#faq2" class="collapsed">/getHeight <i class="icofont-simple-up"></i></a>
             <div id="faq2" class="collapse" data-bs-parent=".faq-list">
-              <p>To create an offline wallet, or a "Cold Wallet" as it most-commonly reffered to, then you would head on over to the Paper Wallet website, turn your internet connection off an hit generate wallet until you feel comftable. You can also download the original source code for the website and generate a wallet that way... Your choice.
+              <br>
+              <h4>Description</h4>
+              <p><code>getHeight()</code> returns the height of the node.</p>
+
+              <h4>Output</h4>
+              <p>
+                <code>Int</code> = Contains strictly numbers.
+                <br>
+                <code>String</code> = Contains all letters, numbers and symbols.
+                <br><br>
               </p>
+
+
+              <table class="customTable" style="width: 50%;">
+                <thead>
+                  <tr>
+                    <th>Argument</th>
+                    <th>Description</th>
+                    <th>Format</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <td><code>height</code></td>
+                    <td>Current node height.</td>
+                    <td><code>int</code></td>
+                  </tr>
+                </tbody>
+
+                <tbody>
+                  <tr>
+                    <td><code>status</code></td>
+                    <td>Status of request.</td>
+                    <td><code>string</code></td>
+                  </tr>
+                </tbody>
+              </table>
+
+
+              <br>
+              <h4>Expected Output</h4>
+              <p>The following data is from a Cache node. </p>
+              <!-- We do this with <pre> and <code> so the text isn't aligned with all the new line spaces. -->
+<pre style="width: 75%;">
+  <code>
+{ <br>
+  height: 40819
+  status: OK
+} <br>
+  </code>
+</pre>
+
+
             </div>
           </li>
 
-          <li data-aos="fade-up" data-aos-delay="300">
+          <li>
             <a data-bs-toggle="collapse" data-bs-target="#faq3" class="collapsed">/getTransactions <i class="icofont-simple-up"></i></a>
             <div id="faq3" class="collapse" data-bs-parent=".faq-list">
             </div>
           </li>
 
-          <li data-aos="fade-up" data-aos-delay="400">
+          <li>
             <a data-bs-toggle="collapse" data-bs-target="#faq4" class="collapsed">/getPeers <i class="icofont-simple-up"></i></a>
             <div id="faq4" class="collapse" data-bs-parent=".faq-list">
             </div>
           </li>
 
-          <li data-aos="fade-up" data-aos-delay="500">
+          <li>
             <a data-bs-toggle="collapse" data-bs-target="#faq5" class="collapsed">/feeInfo <i class="icofont-simple-up"></i></a>
             <div id="faq5" class="collapse" data-bs-parent=".faq-list">
               <p>
@@ -385,6 +437,7 @@ cxche.info()
           </li>
         </ul>
       </div>
+    </section>
       
     <section class="inner-page faq">
       <div class="container">
@@ -395,7 +448,7 @@ cxche.info()
 
       <ul class="faq-list">
 
-        <li data-aos="fade-up" data-aos-delay="100">
+        <li>
           <a data-bs-toggle="collapse" class="" data-bs-target="#faq1">/getInfo <i class="icofont-simple-up"></i></a>
           <div id="faq1" class="collapse show" data-bs-parent=".faq-list">
             <p>
@@ -404,7 +457,7 @@ cxche.info()
           </div>
         </li>
 
-        <li data-aos="fade-up" data-aos-delay="200">
+        <li>
           <a data-bs-toggle="collapse" data-bs-target="#faq2" class="collapsed">/getHeight <i class="icofont-simple-up"></i></a>
           <div id="faq2" class="collapse" data-bs-parent=".faq-list">
             <p>To create an offline wallet, or a "Cold Wallet" as it most-commonly reffered to, then you would head on over to the Paper Wallet website, turn your internet connection off an hit generate wallet until you feel comftable. You can also download the original source code for the website and generate a wallet that way... Your choice.
@@ -412,7 +465,7 @@ cxche.info()
           </div>
         </li>
 
-        <li data-aos="fade-up" data-aos-delay="300">
+        <li>
           <a data-bs-toggle="collapse" data-bs-target="#faq3" class="collapsed">/getTransactions <i class="icofont-simple-up"></i></a>
           <div id="faq3" class="collapse" data-bs-parent=".faq-list">
           </div>
