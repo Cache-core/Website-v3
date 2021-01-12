@@ -106,7 +106,7 @@
         <ul class="faq-list">
 
           <li>
-            <a data-bs-toggle="collapse" class="" data-bs-target="#faq1">/getInfo <i class="icofont-simple-up"></i></a>
+            <a data-bs-toggle="collapse" class="" data-bs-target="#faq1">/getInfo - HTTP RPC API <i class="icofont-simple-up"></i></a>
 
             <div id="faq1" class="collapse show" data-bs-parent=".faq-list">
               <br>
@@ -356,7 +356,7 @@ cxche.info()
           </li>
 
           <li>
-            <a data-bs-toggle="collapse" data-bs-target="#faq2" class="collapsed">/getHeight <i class="icofont-simple-up"></i></a>
+            <a data-bs-toggle="collapse" data-bs-target="#faq2" class="collapsed">/getHeight - HTTP RPC API <i class="icofont-simple-up"></i></a>
             <div id="faq2" class="collapse" data-bs-parent=".faq-list">
               <br>
               <h4>Description</h4>
@@ -371,7 +371,7 @@ cxche.info()
               </p>
 
 
-              <table class="customTable" style="width: 50%;">
+              <table class="customTable" style="width: 30%;">
                 <thead>
                   <tr>
                     <th>Argument</th>
@@ -448,23 +448,260 @@ cxche.index()
           </li>
 
           <li>
-            <a data-bs-toggle="collapse" data-bs-target="#faq3" class="collapsed">/getTransactions <i class="icofont-simple-up"></i></a>
+            <a data-bs-toggle="collapse" data-bs-target="#faq3" class="collapsed">/getTransactions - HTTP RPC API <i class="icofont-simple-up"></i></a>
             <div id="faq3" class="collapse" data-bs-parent=".faq-list">
-            </div>
-          </li>
+              <br>
+              <h4>Description</h4>
+              <p><code>getTransactions()</code> returns list of missed transactions. <b>This command is obsolete and is due to be removed.</b></p>
 
-          <li>
-            <a data-bs-toggle="collapse" data-bs-target="#faq4" class="collapsed">/getPeers <i class="icofont-simple-up"></i></a>
-            <div id="faq4" class="collapse" data-bs-parent=".faq-list">
-            </div>
-          </li>
-
-          <li>
-            <a data-bs-toggle="collapse" data-bs-target="#faq5" class="collapsed">/feeInfo <i class="icofont-simple-up"></i></a>
-            <div id="faq5" class="collapse" data-bs-parent=".faq-list">
+              <h4>Output</h4>
               <p>
-                Cache is as virtual as the credit cards and online banking networks people use everyday. Cache can be used to pay online and in physical stores just like any other form of money. Cache balances are stored in a large distributed network, and they cannot be fraudulently altered by anybody. In other words, Cache users have exclusive control over their funds and $CXCHE cannot vanish just because they are virtual.
+                <code>Array</code> = Contains a data structure.
+                <br>
+                <code>String</code> = Contains all letters, numbers and symbols.
+                <br><br>
               </p>
+
+
+              <table class="customTable" style="width: 40%;">
+                <thead>
+                  <tr>
+                    <th>Argument</th>
+                    <th>Description</th>
+                    <th>Format</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <td><code>missed_tx</code></td>
+                    <td>Array of missed transactions.</td>
+                    <td><code>array</code></td>
+                  </tr>
+                </tbody>
+
+                <tbody>
+                  <tr>
+                    <td><code>status</code></td>
+                    <td>Status of request.</td>
+                    <td><code>string</code></td>
+                  </tr>
+                </tbody>
+
+                <tbody>
+                  <tr>
+                    <td><code>txs_as_hex</code></td>
+                    <td>Array of hex values of missed transactions.</td>
+                    <td><code>array</code></td>
+                  </tr>
+                </tbody>
+              </table>
+              <br>
+              <h4>Useful Commands</h4>
+
+              <table class="customTable" style="width: 30%;">
+                <thead>
+                  <tr>
+                    <th>Format</th>
+                    <th>Command</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <td>Shell</td>
+                    <td><code>curl http://localhost:39000/gettransactions</code></td>
+                  </tr>
+                </tbody>
+              </table>
+
+
+              <br>
+              <h4>Expected Output</h4>
+              <p>The following data is from a Cache node. </p>
+              <!-- We do this with <pre> and <code> so the text isn't aligned with all the new line spaces. -->
+<pre style="width: 75%;">
+  <code>
+{
+  missed_tx: []
+  status: OK
+  txs_as_hex: []
+}
+  </code>
+</pre>
+
+
+            </div>
+          </li>
+
+          <li>
+            <a data-bs-toggle="collapse" data-bs-target="#faq4" class="collapsed">/getPeers - HTTP RPC API <i class="icofont-simple-up"></i></a>
+            <div id="faq4" class="collapse" data-bs-parent=".faq-list">
+              <br>
+              <h4>Description</h4>
+              <p><code>getPeers()</code> returns the list of peers connected to the node.</p>
+
+              <h4>Output</h4>
+              <p>
+                <code>Array</code> = Contains a data structure.
+                <br>
+                <code>String</code> = Contains all letters, numbers and symbols.
+                <br><br>
+              </p>
+
+
+              <table class="customTable" style="width: 30%;">
+                <thead>
+                  <tr>
+                    <th>Argument</th>
+                    <th>Description</th>
+                    <th>Format</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <td><code>peers</code></td>
+                    <td>Array of peers (peer_ip:peer_port).</td>
+                    <td><code>array</code></td>
+                  </tr>
+                </tbody>
+
+                <tbody>
+                  <tr>
+                    <td><code>status</code></td>
+                    <td>Status of request.</td>
+                    <td><code>string</code></td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <br>
+              <h4>Useful Commands</h4>
+
+              <table class="customTable" style="width: 30%;">
+                <thead>
+                  <tr>
+                    <th>Format</th>
+                    <th>Command</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <td>Shell</td>
+                    <td><code>curl http://localhost:39000/getpeers</code></td>
+                  </tr>
+                </tbody>
+              </table>
+
+
+              <br>
+              <h4>Expected Output</h4>
+              <p>The following data is from a Cache node. </p>
+              <!-- We do this with <pre> and <code> so the text isn't aligned with all the new line spaces. -->
+<pre style="width: 75%;">
+  <code>
+{
+  peers: [
+  &#60;IP1&#62;,
+  &#60;IP2&#62;,
+  &#60;IP3&#62;,
+  ...
+  ]
+  status: OK
+}
+  </code>
+</pre>
+
+
+            </div>
+          </li>
+
+          <li>
+            <a data-bs-toggle="collapse" data-bs-target="#faq5" class="collapsed">/feeInfo - HTTP RPC API <i class="icofont-simple-up"></i></a>
+            <div id="faq5" class="collapse" data-bs-parent=".faq-list">
+              <br>
+              <h4>Description</h4>
+              <p><code>getHeight()</code> returns the height of the node.</p>
+
+              <h4>Output</h4>
+              <p>
+                <code>Int</code> = Contains strictly numbers.
+                <br>
+                <code>String</code> = Contains all letters, numbers and symbols.
+                <br><br>
+              </p>
+
+
+              <table class="customTable" style="width: 40%;">
+                <thead>
+                  <tr>
+                    <th>Argument</th>
+                    <th>Description</th>
+                    <th>Format</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <td><code>address</code></td>
+                    <td>Address to which the fee is paid.</td>
+                    <td><code>int</code></td>
+                  </tr>
+                </tbody>
+
+                <tbody>
+                  <tr>
+                    <td><code>amount</code></td>
+                    <td>Fee amount.</td>
+                    <td><code>int</code></td>
+                  </tr>
+                </tbody>
+
+                <tbody>
+                  <tr>
+                    <td><code>status</code></td>
+                    <td>Status of request.</td>
+                    <td><code>string</code></td>
+                  </tr>
+                </tbody>
+              </table>
+              <br>
+              <h4>Useful Commands</h4>
+
+              <table class="customTable" style="width: 30%;">
+                <thead>
+                  <tr>
+                    <th>Format</th>
+                    <th>Command</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <td>Shell</td>
+                    <td><code>curl http://localhost:39000/feeinfo</code></td>
+                  </tr>
+                </tbody>
+              </table>
+
+
+              <br>
+              <h4>Expected Output</h4>
+              <p>The following data is from a Cache node. </p>
+              <!-- We do this with <pre> and <code> so the text isn't aligned with all the new line spaces. -->
+<pre style="width: 75%;">
+  <code>
+{
+  address:
+  amount: 0
+  status: Node's fee address is not set
+}
+  </code>
+</pre>
+
+
             </div>
           </li>
         </ul>
