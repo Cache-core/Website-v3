@@ -531,7 +531,7 @@ section {
   width: 120px;
   height: 1px;
   display: inline-block;
-  background: #fd9042;
+  background:#673AB7;
   margin: 4px 10px;
 }
 
@@ -1711,3 +1711,6 @@ pre code {
 .toplist li a:hover {
   font-size: 20px;
 }
+
+/* ------------------------------------------------------------------------- */
+
